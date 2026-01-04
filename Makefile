@@ -5,9 +5,13 @@ PUMPKIN_URL = https://github.com/Pumpkin-MC/Pumpkin/releases/download/nightly/pu
 
 all:
 	@echo "all		print this text"
+	@echo "run		run the server"
 	@echo "pumpkin		download pumpkin"
 	@echo "clean		remove generated files"
 	@echo "veryclean	like clean, but also remove downloaded files (e.g. pumpkin)"
+
+run: pumpkin
+	${PUMPKIN}
 
 pumpkin ${PUMPKIN}:
 	mkdir -p "${DOWNLOADS}"
